@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="text-warning"> its a normal home page</h1>
+<hr>
+<h2>hi dear {{user}}</h2>
+{% if age > 18 %}
+<p> u are adult</p>
+{% else %}
+<p> u dont have acces</p>
+{% endif %}
+<ul>
+    {% for title in blogs.values() %}
+    <li>{{title}}</li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}
